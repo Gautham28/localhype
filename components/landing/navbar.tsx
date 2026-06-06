@@ -11,21 +11,12 @@ export function Navbar() {
       >
         <Logo />
 
-        <div className="flex items-center gap-2 md:gap-3">
-          <Button
-            render={<Link href="#launch" />}
-            className="font-accent h-11 rounded-full bg-brand-orange px-3 text-xs font-semibold uppercase tracking-wide text-white hover:bg-brand-orange/90 md:px-5 md:text-sm"
-          >
-            Launch Campaign
-          </Button>
-          <Button
-            variant="outline"
-            render={<Link href="#community" />}
-            className="font-accent h-11 rounded-full border-2 border-brand-black bg-white px-3 text-xs font-semibold uppercase tracking-wide text-brand-black hover:bg-muted md:px-5 md:text-sm"
-          >
-            Join Community
-          </Button>
-        </div>
+        <Button
+          render={<Link href="mailto:hello@localhype.com" />}
+          className="font-accent h-11 rounded-full bg-brand-orange px-5 text-xs font-semibold uppercase tracking-wide text-white hover:bg-brand-orange/90 md:px-6 md:text-sm"
+        >
+          Get in Touch
+        </Button>
       </nav>
     </header>
   );

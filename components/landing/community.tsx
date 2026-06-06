@@ -40,21 +40,12 @@ export function Community() {
             ))}
           </ul>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button
-              render={<Link href="#community" />}
-              className="font-accent h-11 rounded-full border-2 border-brand-black bg-brand-purple px-6 text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-purple/90"
-            >
-              Join Community
-            </Button>
-            <Button
-              variant="outline"
-              render={<Link href="#how-it-works" />}
-              className="font-accent h-11 rounded-full border-2 border-brand-black bg-transparent px-6 text-sm font-semibold uppercase tracking-wide text-brand-black hover:bg-brand-black/5"
-            >
-              See How It Works
-            </Button>
-          </div>
+          <Button
+            render={<Link href="#community" />}
+            className="font-accent h-11 w-fit rounded-full border-2 border-brand-black bg-brand-purple px-6 text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-purple/90"
+          >
+            Join Community
+          </Button>
         </div>
 
         <div className="order-1 md:order-2">

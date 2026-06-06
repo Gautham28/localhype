@@ -1,11 +1,8 @@
-import Link from "next/link";
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -75,20 +72,6 @@ export function PricingCard({ tier }: PricingCardProps) {
           ))}
         </ul>
       </CardContent>
-
-      <CardFooter className="mt-auto border-0 bg-transparent">
-        <Button
-          render={<Link href="#launch" />}
-          className={cn(
-            "font-accent h-11 w-full rounded-full border-2 border-brand-black text-sm font-semibold uppercase tracking-wide",
-            highlighted
-              ? "bg-brand-purple text-white hover:bg-brand-purple/90"
-              : "bg-brand-orange text-white hover:bg-brand-orange/90"
-          )}
-        >
-          Get Started
-        </Button>
-      </CardFooter>
     </Card>
   );
 }

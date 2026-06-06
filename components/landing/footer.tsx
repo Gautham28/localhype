@@ -22,21 +22,12 @@ export function Footer() {
           Whether you&apos;re a local business or a community member — your city
           is waiting.
         </p>
-        <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
-          <Button
-            render={<Link href="#launch" />}
-            className="font-accent h-11 rounded-full border-2 border-brand-black bg-brand-lime px-8 text-sm font-semibold uppercase tracking-wide text-brand-black hover:bg-brand-lime/90"
-          >
-            Launch Campaign
-          </Button>
-          <Button
-            variant="outline"
-            render={<Link href="#community" />}
-            className="font-accent h-11 rounded-full border-2 border-white bg-transparent px-8 text-sm font-semibold uppercase tracking-wide text-white hover:bg-white/10"
-          >
-            Join Community
-          </Button>
-        </div>
+        <Button
+          render={<Link href="mailto:hello@localhype.com" />}
+          className="font-accent mt-8 h-11 rounded-full border-2 border-brand-black bg-brand-lime px-8 text-sm font-semibold uppercase tracking-wide text-brand-black hover:bg-brand-lime/90"
+        >
+          Get in Touch
+        </Button>
       </div>
 
       <div className="border-t-2 border-brand-black/20">

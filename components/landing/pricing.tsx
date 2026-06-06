@@ -1,7 +1,5 @@
 import { PillBadge } from "@/components/landing/pill-badge";
 import { PricingCard, type PricingTier } from "@/components/landing/pricing-card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { Clapperboard } from "lucide-react";
 
 const tiers: PricingTier[] = [
@@ -75,7 +73,7 @@ export function Pricing() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border-2 border-brand-black bg-brand-orange p-6 shadow-brutal-lg md:mt-10 md:flex md:items-center md:justify-between md:gap-8 md:p-10">
+        <div className="mt-8 rounded-2xl border-2 border-brand-black bg-brand-orange p-6 shadow-brutal-lg md:mt-10 md:p-10">
           <div className="flex flex-col gap-4 md:max-w-xl">
             <div className="flex items-center gap-3">
               <div className="flex size-12 items-center justify-center rounded-xl border-2 border-white bg-white/10">
@@ -95,13 +93,6 @@ export function Pricing() {
             The Reel is posted on their account and can also be shared with our broader community for extra reach.
             </p>
           </div>
-
-          <Button
-            render={<Link href="#launch" />}
-            className="font-accent mt-6 h-11 shrink-0 rounded-full border-2 border-brand-black bg-brand-lime px-6 text-sm font-semibold uppercase tracking-wide text-brand-black hover:bg-brand-lime/90 md:mt-0"
-          >
-            Add Reel Package
-          </Button>
         </div>
       </div>
     </section>
