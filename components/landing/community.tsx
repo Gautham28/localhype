@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PillBadge } from "@/components/landing/pill-badge";
-import { CommunityGraphic } from "@/components/landing/community-graphic";
+import { VisionImage } from "@/components/landing/vision-image";
 import { Button } from "@/components/ui/button";
 
 const perks = [
@@ -58,7 +58,11 @@ export function Community() {
         </div>
 
         <div className="order-1 md:order-2">
-          <CommunityGraphic />
+          <VisionImage
+            src="/lh_vision31.png"
+            alt="Hand holding a phone showing LocalHype with coins representing earnings"
+            className="h-80 max-w-sm md:h-[28rem] md:max-w-md lg:h-[32rem] lg:max-w-lg"
+          />
         </div>
       </div>
     </section>

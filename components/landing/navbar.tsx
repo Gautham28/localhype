@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/landing/logo";
 import { Button } from "@/components/ui/button";
 
 export function Navbar() {
@@ -8,12 +9,7 @@ export function Navbar() {
         aria-label="Main navigation"
         className="mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-full border-2 border-brand-black bg-white/90 px-4 py-2.5 shadow-brutal backdrop-blur-md md:gap-4 md:px-6 md:py-3"
       >
-        <Link
-          href="/"
-          className="font-heading shrink-0 text-xl font-extrabold text-brand-purple md:text-2xl"
-        >
-          LocalHype
-        </Link>
+        <Logo />
 
         <div className="flex items-center gap-2 md:gap-3">
           <Button

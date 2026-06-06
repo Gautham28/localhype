@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/landing/logo";
 import { Button } from "@/components/ui/button";
 
 const footerLinks = [
@@ -40,12 +41,7 @@ export function Footer() {
 
       <div className="border-t-2 border-brand-black/20">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8 md:flex-row md:justify-between">
-          <Link
-            href="/"
-            className="font-heading text-xl font-extrabold text-white"
-          >
-            LocalHype
-          </Link>
+          <Logo imageClassName="brightness-0 invert" />
 
           <nav
             aria-label="Footer"

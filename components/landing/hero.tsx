@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { PillBadge } from "@/components/landing/pill-badge";
-import { HeroMockups } from "@/components/landing/hero-mockups";
 
 export function Hero() {
   return (
@@ -10,14 +10,25 @@ export function Hero() {
         </PillBadge>
 
         <h1 className="font-heading max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-brand-black md:text-6xl lg:text-7xl">
-        Turn Everyday Locals into Your Brand’s Loudest Advocates
+          Turn Everyday Locals into Your Brand’s Loudest Advocates
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:mt-8 md:text-lg">
-        LocalHype connects local businesses with real people who share authentic stories on Instagram. No big influencers. Just genuine word-of-mouth at scale.
+          LocalHype connects local businesses with real people who share
+          authentic stories on Instagram. No big influencers. Just genuine
+          word-of-mouth at scale.
         </p>
 
-        <HeroMockups />
+        <div className="relative mt-12 w-full max-w-sm md:mt-16 md:max-w-xl lg:max-w-2xl">
+          <Image
+            src="/hero2.png"
+            alt="Community members sharing local business stories on Instagram around a neighborhood coffee shop"
+            width={1200}
+            height={800}
+            priority
+            className="h-auto w-full"
+          />
+        </div>
       </div>
     </section>
   );
