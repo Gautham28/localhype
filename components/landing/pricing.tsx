@@ -7,42 +7,44 @@ import { Clapperboard } from "lucide-react";
 const tiers: PricingTier[] = [
   {
     name: "Spark",
-    price: "$149",
+    price: "₹2,000",
     period: "/ campaign",
     description: "Perfect for first-time launches and testing the waters.",
     features: [
-      "5 community story activations",
-      "1 neighborhood zone",
-      "Basic insights dashboard",
-      "48-hour campaign setup",
+      "10 local Instagram accounts",
+      "Up to 2 ready-made Story creatives",
+      "Clear briefing + detailed posting instructions",
+      "Proof of posting (screenshots + view counts)",
+      "Basic report with all screenshots"
     ],
   },
   {
     name: "Buzz",
-    price: "$349",
+    price: "₹3,500",
     period: "/ campaign",
-    description: "Our most popular package for businesses ready to grow.",
+    description: "Our sweet spot for growing local businesses.",
     features: [
-      "15 community story activations",
-      "3 neighborhood zones",
-      "Priority member matching",
-      "Full analytics & export",
-      "Dedicated campaign support",
+      "20 local Instagram accounts",
+      "Up to 4 ready-made Story creatives",
+      "Higher quality participant filtering",
+      "Professional report with total & average views",
+      "Everything in Spark",
     ],
     highlighted: true,
     badge: "Most Popular",
   },
   {
     name: "Hype",
-    price: "$699",
+    price: "₹6,000",
     period: "/ campaign",
     description: "Maximum reach for brands that want to own the conversation.",
     features: [
-      "40+ community story activations",
-      "Citywide coverage",
-      "Premium member matching",
+      "40 local Instagram accounts",
+      "Up to 6 ready-made Story creatives",
+      "Premium participant filtering",
       "Advanced insights & reporting",
-      "Strategy call included",
+      "Performance bonus for top performers",
+      "Everything in Buzz"
     ],
   },
 ];
@@ -87,8 +89,10 @@ export function Pricing() {
               Special Reel Production
             </h3>
             <p className="text-base leading-relaxed text-white/90 md:text-lg">
-              We turn your best community stories into a polished, branded reel
-              — ready to post, boost, and share across every channel.
+            We produce one high-quality promotional Reel featuring one of our local micro-influencers (3K+ followers).
+            </p>
+            <p className="text-base leading-relaxed text-white/90 md:text-lg">
+            The Reel is posted on their account and can also be shared with our broader community for extra reach.
             </p>
           </div>
 

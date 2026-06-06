@@ -10,12 +10,11 @@ export function Hero() {
         </PillBadge>
 
         <h1 className="font-heading max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-brand-black md:text-6xl lg:text-7xl">
-          Local Word-of-Mouth, at Scale.
+        Turn Everyday Locals into Your Brand’s Loudest Advocates
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:mt-8 md:text-lg">
-          Turn everyday community members into your most trusted marketing
-          channel — authentic Instagram stories that drive real foot traffic.
+        LocalHype connects local businesses with real people who share authentic stories on Instagram. No big influencers. Just genuine word-of-mouth at scale.
         </p>
 
         <HeroMockups />

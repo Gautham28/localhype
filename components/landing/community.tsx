@@ -4,10 +4,9 @@ import { CommunityGraphic } from "@/components/landing/community-graphic";
 import { Button } from "@/components/ui/button";
 
 const perks = [
-  "Get matched with campaigns near you",
-  "Post stories on your own schedule",
-  "Earn per activation — no follower minimum",
-  "Discover the best spots in your city",
+  "Get matched with campaigns in your area",
+  "Earn cash for posting Stories with your personal touch",
+  "Support businesses you genuinely like",
 ];
 
 export function Community() {
@@ -21,12 +20,12 @@ export function Community() {
           <PillBadge>For Community Members</PillBadge>
 
           <h2 className="font-heading text-3xl font-extrabold leading-tight tracking-tight text-brand-black md:text-5xl lg:text-6xl">
-            Get Paid to Explore Your City.
+          Turn Your Instagram Stories into Income.
           </h2>
 
           <p className="max-w-lg text-base leading-relaxed text-brand-black/80 md:text-lg">
-            Love trying new cafes, shops, and hidden gems? LocalHype pays you to
-            share what you find — real stories, real places, real money.
+          Your everyday posts about local spots have real value.
+          LocalHype connects you with businesses that want authentic promotion from real locals.
           </p>
 
           <ul className="space-y-3">

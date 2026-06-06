@@ -4,33 +4,33 @@ import { HowItWorksStep } from "@/components/landing/how-it-works-step";
 const steps = [
   {
     number: "01",
-    title: "Choose Vibe",
+    title: "Choose Your Package",
     description:
-      "Pick the campaign style, audience, and local energy you want to create — from soft launches to full-city buzz.",
+      "Pick the right size campaign for your goals — from testing the waters to full city coverage.",
   },
   {
     number: "02",
-    title: "Setup",
+    title: "Campaign Setup",
     description:
-      "Configure your offer, creative brief, and target neighborhoods. Most campaigns are live in under ten minutes.",
+      "We finalize the creative brief, offer, timing, hashtags, tags, and location strategy together. Most campaigns are ready in under 10 minutes.",
   },
   {
     number: "03",
     title: "Activation",
     description:
-      "Community members discover your campaign and post authentic Instagram stories about your business.",
+      "We post the campaign to our community. Interested locals apply. We carefully shortlist the best matches and brief them with detailed posting instructions.",
   },
   {
     number: "04",
     title: "Hype",
     description:
-      "Stories stack up views and conversations. Real locals drive real foot traffic through trusted word-of-mouth.",
+      "Selected community members post authentic Instagram Stories (with your provided creatives + their personal touch). This creates multiple trusted touchpoints across the city.",
   },
   {
     number: "05",
-    title: "Insights",
+    title: "Insights & Payouts",
     description:
-      "Track reach, engagement, and ROI in one dashboard — so you know exactly what is working.",
+      "After 24 hours, participants submit story screenshots + view counts. We compile a clear report for you and pay every community member promptly.",
   },
 ] as const;
 
