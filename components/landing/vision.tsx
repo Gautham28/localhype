@@ -20,7 +20,7 @@ export function Vision() {
         <VisionRow
           pill="For Local Businesses"
           headline="Marketing That Feels Human."
-          body="Stop shouting into the void. Launch campaigns that land through trusted voices — the people your customers already know, follow, and believe."
+          body="Stop shouting into the void. Launch campaigns that land through trusted voices, the people your customers already know, follow, and believe."
           illustration={
             <VisionImage
               src="/lh-vision21.png"
@@ -33,7 +33,7 @@ export function Vision() {
         <VisionRow
           pill="For Community Members"
           headline="Your Stories Have Value."
-          body="Share your favorite spots, get compensated for real engagement, and help the businesses you love thrive — just by being yourself."
+          body="Share your favorite spots, get compensated for real engagement, and help the businesses you love thrive , just by being yourself."
           illustration={
             <VisionImage
               src="/lh_vision31.png"

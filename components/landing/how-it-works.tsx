@@ -6,7 +6,7 @@ const steps = [
     number: "01",
     title: "Choose Your Package",
     description:
-      "Pick the right size campaign for your goals — from testing the waters to full city coverage.",
+      "Pick the right size campaign for your goals , from testing the waters to full city coverage.",
   },
   {
     number: "02",
@@ -48,7 +48,7 @@ export function HowItWorks() {
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
             A simple vertical flow built for local businesses that want real
-            results — not vanity metrics.
+            results.
           </p>
         </div>
 

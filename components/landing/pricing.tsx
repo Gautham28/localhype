@@ -57,7 +57,7 @@ export function Pricing() {
             Packages built for every stage of growth.
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Choose a campaign size that fits your goals. Scale up anytime — no
+            Choose a campaign size that fits your goals. Scale up anytime, no
             long-term contracts.
           </p>
         </div>
