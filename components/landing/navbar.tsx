@@ -1,6 +1,7 @@
-import Link from "next/link";
+"use client";
+
 import { Logo } from "@/components/landing/logo";
-import { Button } from "@/components/ui/button";
+import { GetInTouchButton } from "@/components/landing/contact-modal";
 
 export function Navbar() {
   return (
@@ -10,13 +11,7 @@ export function Navbar() {
         className="mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-full border-2 border-brand-black bg-white/90 px-4 py-2.5 shadow-brutal backdrop-blur-md md:gap-4 md:px-6 md:py-3"
       >
         <Logo />
-
-        <Button
-          render={<Link href="mailto:hello@localhype.com" />}
-          className="font-accent h-11 rounded-full bg-brand-orange px-5 text-xs font-semibold uppercase tracking-wide text-white hover:bg-brand-orange/90 md:px-6 md:text-sm"
-        >
-          Get in Touch
-        </Button>
+        <GetInTouchButton />
       </nav>
     </header>
   );

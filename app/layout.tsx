@@ -4,6 +4,7 @@ import {
   Barlow_Condensed,
   Inter,
 } from "next/font/google";
+import { ContactModalProvider } from "@/components/landing/contact-modal";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -39,7 +40,9 @@ export default function RootLayout({
       lang="en"
       className={`${bricolage.variable} ${barlowCondensed.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <ContactModalProvider>{children}</ContactModalProvider>
+      </body>
     </html>
   );
 }

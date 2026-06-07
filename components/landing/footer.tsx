@@ -1,15 +1,19 @@
+"use client";
+
 import Link from "next/link";
 import { Logo } from "@/components/landing/logo";
-import { Button } from "@/components/ui/button";
+import {
+  ContactNavLink,
+  GetInTouchButton,
+} from "@/components/landing/contact-modal";
 
 const footerLinks = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Pricing", href: "#launch" },
   { label: "Community", href: "#community" },
-  { label: "Contact", href: "mailto:hello@localhype.com" },
   { label: "Privacy", href: "#" },
   { label: "Terms", href: "#" },
-];
+] as const;
 
 export function Footer() {
   return (
@@ -19,15 +23,10 @@ export function Footer() {
           Ready to bring the hype?
         </h2>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
-          Whether you&apos;re a local business or a community member — your city
-          is waiting.
+          Launch a campaign and turn local word-of-mouth into real results for
+          your business.
         </p>
-        <Button
-          render={<Link href="mailto:hello@localhype.com" />}
-          className="font-accent mt-8 h-11 rounded-full border-2 border-brand-black bg-brand-lime px-8 text-sm font-semibold uppercase tracking-wide text-brand-black hover:bg-brand-lime/90"
-        >
-          Get in Touch
-        </Button>
+        <GetInTouchButton variant="footer" className="mt-8" />
       </div>
 
       <div className="border-t-2 border-brand-black/20">
@@ -47,6 +46,7 @@ export function Footer() {
                 {link.label}
               </Link>
             ))}
+            <ContactNavLink />
           </nav>
 
           <p className="font-accent text-xs font-semibold uppercase tracking-wide text-white/70">
