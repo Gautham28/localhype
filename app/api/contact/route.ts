@@ -6,6 +6,7 @@ type ContactPayload = {
   businessName?: string;
   name?: string;
   email?: string;
+  phone?: string;
   package?: string;
   message?: string;
   audience?: string;
@@ -23,12 +24,16 @@ export async function POST(request: Request) {
   const businessName = body.businessName?.trim();
   const name = body.name?.trim();
   const email = body.email?.trim();
+  const phone = body.phone?.trim();
   const selectedPackage = body.package?.trim();
   const message = body.message?.trim() ?? "";
 
-  if (!businessName || !name || !email || !selectedPackage) {
+  if (!businessName || !name || !email || !phone || !selectedPackage) {
     return NextResponse.json(
-      { error: "Business name, contact name, email, and package are required" },
+      {
+        error:
+          "Business name, contact name, email, contact number, and package are required",
+      },
       { status: 400 }
     );
   }
@@ -45,14 +50,38 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid package selection" }, { status: 400 });
   }
 
-  console.log("Business contact submission:", {
-    businessName,
-    name,
-    email,
-    package: selectedPackage,
-    message,
-    audience: "business",
+  const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+
+  if (!webhookUrl) {
+    console.error("GOOGLE_SHEETS_WEBHOOK_URL is not set");
+    return NextResponse.json(
+      { error: "Form is not configured" },
+      { status: 500 }
+    );
+  }
+
+  const sheetResponse = await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      payload: JSON.stringify({
+        businessName,
+        name,
+        email,
+        phone,
+        package: selectedPackage,
+        message,
+      }),
+    }).toString(),
   });
+
+  if (!sheetResponse.ok) {
+    console.error("Google Sheets webhook failed:", await sheetResponse.text());
+    return NextResponse.json(
+      { error: "Failed to save submission" },
+      { status: 502 }
+    );
+  }
 
   return NextResponse.json({ ok: true });
 }

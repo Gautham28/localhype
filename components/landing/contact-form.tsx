@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 const fieldClass =
-  "font-sans w-full rounded-xl border-2 border-brand-black bg-white px-4 py-3 text-base text-brand-black outline-none transition-shadow placeholder:text-muted-foreground focus:shadow-brutal-sm";
+  "font-sans w-full rounded-xl border-2 border-brand-black bg-white px-4 py-3 text-base text-brand-black outline-none transition-shadow focus:shadow-brutal-sm";
 
 const labelClass =
   "font-accent text-xs font-semibold uppercase tracking-[0.15em] text-brand-black";
@@ -36,6 +36,7 @@ export function ContactForm({
   const [businessName, setBusinessName] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [packageChoice, setPackageChoice] = useState("");
   const [message, setMessage] = useState("");
   const [packageError, setPackageError] = useState(false);
@@ -64,6 +65,7 @@ export function ContactForm({
           businessName,
           name,
           email,
+          phone,
           package: packageChoice,
           message,
           audience: "business",
@@ -78,6 +80,7 @@ export function ContactForm({
       setBusinessName("");
       setName("");
       setEmail("");
+      setPhone("");
       setPackageChoice("");
       setMessage("");
       onSuccess?.();
@@ -117,7 +120,6 @@ export function ContactForm({
           required
           value={businessName}
           onChange={(e) => setBusinessName(e.target.value)}
-          placeholder="Your business name"
           className={fieldClass}
         />
       </div>
@@ -134,7 +136,6 @@ export function ContactForm({
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Contact name"
             className={fieldClass}
           />
         </div>
@@ -150,10 +151,24 @@ export function ContactForm({
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@business.com"
             className={fieldClass}
           />
         </div>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <label htmlFor="contact-phone" className={labelClass}>
+          Contact Number
+        </label>
+        <input
+          id="contact-phone"
+          name="phone"
+          type="tel"
+          required
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          className={fieldClass}
+        />
       </div>
 
       <fieldset>
@@ -216,7 +231,6 @@ export function ContactForm({
           rows={3}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="What are you looking to promote? Any goals or timelines?"
           className={cn(fieldClass, "min-h-20 resize-y md:min-h-28")}
         />
       </div>
