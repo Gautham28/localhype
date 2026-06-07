@@ -4,7 +4,7 @@ import { Clapperboard } from "lucide-react";
 
 const tiers: PricingTier[] = [
   {
-    name: "Spark",
+    name: "Buzz",
     price: "₹2,000",
     period: "/ campaign",
     description: "Perfect for first-time launches and testing the waters.",
@@ -17,7 +17,7 @@ const tiers: PricingTier[] = [
     ],
   },
   {
-    name: "Buzz",
+    name: "Hype",
     price: "₹3,500",
     period: "/ campaign",
     description: "Our sweet spot for growing local businesses.",
@@ -26,13 +26,13 @@ const tiers: PricingTier[] = [
       "Up to 4 ready-made Story creatives",
       "Higher quality participant filtering",
       "Professional report with total & average views",
-      "Everything in Spark",
+      "Everything in Buzz",
     ],
     highlighted: true,
     badge: "Most Popular",
   },
   {
-    name: "Hype",
+    name: "Viral",
     price: "₹6,000",
     period: "/ campaign",
     description: "Maximum reach for brands that want to own the conversation.",
@@ -42,7 +42,7 @@ const tiers: PricingTier[] = [
       "Premium participant filtering",
       "Advanced insights & reporting",
       "Performance bonus for top performers",
-      "Everything in Buzz"
+      "Everything in Hype"
     ],
   },
 ];
@@ -84,13 +84,13 @@ export function Pricing() {
               </span>
             </div>
             <h3 className="font-heading text-2xl font-extrabold tracking-tight text-white md:text-4xl">
-              Special Reel Production
+              Takeover
             </h3>
             <p className="text-base leading-relaxed text-white/90 md:text-lg">
             We produce one high-quality promotional Reel featuring one of our local micro-influencers (3K+ followers).
             </p>
             <p className="text-base leading-relaxed text-white/90 md:text-lg">
-            The Reel is posted on their account and can also be shared with our broader community for extra reach.
+            The Reel is posted as a collaborative post between the business and LocalHype, and can be shared across our creator community for additional reach and engagement.
             </p>
           </div>
         </div>

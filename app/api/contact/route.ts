@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const VALID_PACKAGES = ["spark", "buzz", "hype", "reel", "unsure"] as const;
+const VALID_PACKAGES = ["buzz", "hype", "viral", "takeover", "unsure"] as const;
 
 type ContactPayload = {
   businessName?: string;

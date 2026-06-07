@@ -13,10 +13,10 @@ const labelClass =
   "font-accent text-xs font-semibold uppercase tracking-[0.15em] text-brand-black";
 
 const packages = [
-  { value: "spark", label: "Spark", price: "₹2,000" },
-  { value: "buzz", label: "Buzz", price: "₹3,500" },
-  { value: "hype", label: "Hype", price: "₹6,000" },
-  { value: "reel", label: "Reel Add-on", price: null },
+  { value: "buzz", label: "Buzz", price: "₹2,000" },
+  { value: "hype", label: "Hype", price: "₹3,500" },
+  { value: "viral", label: "Viral", price: "₹6,000" },
+  { value: "takeover", label: "Takeover", price: null },
   { value: "unsure", label: "Not sure yet", price: null },
 ] as const;
 
