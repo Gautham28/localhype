@@ -1,18 +1,35 @@
 "use client";
 
 import Link from "next/link";
+import { createLucideIcon, Mail, MessageCircle } from "lucide-react";
+import { GetInTouchButton } from "@/components/landing/contact-modal";
 import { Logo } from "@/components/landing/logo";
-import {
-  ContactNavLink,
-  GetInTouchButton,
-} from "@/components/landing/contact-modal";
 
-const footerLinks = [
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Pricing", href: "#launch" },
-  { label: "Community", href: "#community" },
-  { label: "Privacy", href: "#" },
-  { label: "Terms", href: "#" },
+const Instagram = createLucideIcon("Instagram", [
+  ["rect", { width: "20", height: "20", x: "2", y: "2", rx: "5", ry: "5" }],
+  ["path", { d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" }],
+  ["line", { x1: "17.5", x2: "17.51", y1: "6.5", y2: "6.5" }],
+]);
+
+const socialLinks = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/localhype.india/",
+    icon: Instagram,
+    external: true,
+  },
+  {
+    label: "Email",
+    href: "mailto:localhype.goa@gmail.com",
+    icon: Mail,
+    external: false,
+  },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/919405061349",
+    icon: MessageCircle,
+    external: true,
+  },
 ] as const;
 
 export function Footer() {
@@ -30,28 +47,23 @@ export function Footer() {
       </div>
 
       <div className="border-t-2 border-brand-black/20">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8 md:flex-row md:justify-between">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-8">
           <Logo imageClassName="brightness-0 invert" />
 
-          <nav
-            aria-label="Footer"
-            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"
-          >
-            {footerLinks.map((link) => (
+          <nav aria-label="Social links" className="flex items-center gap-6">
+            {socialLinks.map(({ label, href, icon: Icon, external }) => (
               <Link
-                key={link.label}
-                href={link.href}
-                className="font-accent text-xs font-semibold uppercase tracking-wide text-white/80 transition-colors hover:text-white"
+                key={label}
+                href={href}
+                aria-label={label}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                className="text-white/80 transition-colors hover:text-white"
               >
-                {link.label}
+                <Icon className="size-6" strokeWidth={1.75} />
               </Link>
             ))}
-            <ContactNavLink />
           </nav>
-
-          <p className="font-accent text-xs font-semibold uppercase tracking-wide text-white/70">
-            © {new Date().getFullYear()} LocalHype
-          </p>
         </div>
       </div>
     </footer>
