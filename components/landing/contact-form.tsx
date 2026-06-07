@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+type FormStatus = "idle" | "loading" | "success" | "error";
 
 const fieldClass =
   "font-sans w-full rounded-xl border-2 border-brand-black bg-white px-4 py-3 text-base text-brand-black outline-none transition-shadow placeholder:text-muted-foreground focus:shadow-brutal-sm";
@@ -20,18 +22,28 @@ const packages = [
 
 type ContactFormProps = {
   onSuccess?: () => void;
+  formId?: string;
+  showSubmit?: boolean;
+  onStatusChange?: (status: FormStatus) => void;
 };
 
-export function ContactForm({ onSuccess }: ContactFormProps) {
+export function ContactForm({
+  onSuccess,
+  formId = "contact-form",
+  showSubmit = true,
+  onStatusChange,
+}: ContactFormProps) {
   const [businessName, setBusinessName] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [packageChoice, setPackageChoice] = useState("");
   const [message, setMessage] = useState("");
   const [packageError, setPackageError] = useState(false);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
-    "idle"
-  );
+  const [status, setStatus] = useState<FormStatus>("idle");
+
+  useEffect(() => {
+    onStatusChange?.(status);
+  }, [status, onStatusChange]);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -89,7 +101,11 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+    <form
+      id={formId}
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-4 md:gap-5"
+    >
       <div className="flex flex-col gap-2">
         <label htmlFor="contact-business" className={labelClass}>
           Business Name
@@ -197,11 +213,11 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         <textarea
           id="contact-message"
           name="message"
-          rows={4}
+          rows={3}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="What are you looking to promote? Any goals or timelines?"
-          className={cn(fieldClass, "min-h-28 resize-y")}
+          className={cn(fieldClass, "min-h-20 resize-y md:min-h-28")}
         />
       </div>
 
@@ -212,13 +228,15 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         </p>
       )}
 
-      <Button
-        type="submit"
-        disabled={status === "loading"}
-        className="font-accent h-11 w-full rounded-full border-2 border-brand-black bg-brand-orange text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-orange/90 disabled:opacity-60"
-      >
-        {status === "loading" ? "Sending..." : "Send Message"}
-      </Button>
+      {showSubmit && (
+        <Button
+          type="submit"
+          disabled={status === "loading"}
+          className="font-accent h-11 w-full rounded-full border-2 border-brand-black bg-brand-orange text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-orange/90 disabled:opacity-60"
+        >
+          {status === "loading" ? "Sending..." : "Send Message"}
+        </Button>
+      )}
     </form>
   );
 }

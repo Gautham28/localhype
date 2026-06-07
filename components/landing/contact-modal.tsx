@@ -28,7 +28,11 @@ function useContactModal() {
   return context;
 }
 
+type FormStatus = "idle" | "loading" | "success" | "error";
+
 function ContactModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const [formStatus, setFormStatus] = useState<FormStatus>("idle");
+
   useEffect(() => {
     if (!open) return;
 
@@ -45,10 +49,16 @@ function ContactModal({ open, onClose }: { open: boolean; onClose: () => void })
     };
   }, [open, onClose]);
 
+  useEffect(() => {
+    if (!open) setFormStatus("idle");
+  }, [open]);
+
   if (!open) return null;
 
+  const showFooter = formStatus !== "success";
+
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[100] flex items-end justify-center p-0 sm:items-center sm:p-4">
       <button
         type="button"
         aria-label="Close dialog"
@@ -60,32 +70,51 @@ function ContactModal({ open, onClose }: { open: boolean; onClose: () => void })
         role="dialog"
         aria-modal="true"
         aria-labelledby="contact-modal-title"
-        className="relative z-10 w-full max-w-lg rounded-2xl border-2 border-brand-black bg-white p-6 shadow-brutal-lg md:p-8"
+        className="relative z-10 flex max-h-[92dvh] w-full max-w-lg flex-col overflow-hidden rounded-t-2xl border-2 border-brand-black bg-white shadow-brutal-lg sm:max-h-[calc(100dvh-2rem)] sm:rounded-2xl"
       >
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close"
-          className="absolute right-4 top-4 flex size-9 items-center justify-center rounded-full border-2 border-brand-black bg-white text-brand-black transition-colors hover:bg-muted"
-        >
-          <X className="size-4" strokeWidth={2.5} />
-        </button>
+        <div className="relative shrink-0 border-b-2 border-brand-black px-4 py-4 pr-14 md:px-6 md:py-5">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full border-2 border-brand-black bg-white text-brand-black transition-colors hover:bg-muted md:right-4 md:top-4"
+          >
+            <X className="size-4" strokeWidth={2.5} />
+          </button>
 
-        <div className="mb-6 pr-8">
-          <PillBadge className="mb-4">For Local Businesses</PillBadge>
+          <PillBadge className="mb-3">For Local Businesses</PillBadge>
           <h2
             id="contact-modal-title"
-            className="font-heading text-2xl font-extrabold leading-tight tracking-tight text-brand-black md:text-3xl"
+            className="font-heading text-xl font-extrabold leading-tight tracking-tight text-brand-black md:text-3xl"
           >
             Get in Touch
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-            Tell us about your business and we&apos;ll help you launch your first
-            LocalHype campaign.
+          <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground md:mt-2 md:text-base">
+            Tell us about your business and we&apos;ll help you launch your
+            first LocalHype campaign.
           </p>
         </div>
 
-        <ContactForm />
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-4 md:px-6 md:py-5">
+          <ContactForm
+            formId="contact-form"
+            showSubmit={false}
+            onStatusChange={setFormStatus}
+          />
+        </div>
+
+        {showFooter && (
+          <div className="shrink-0 border-t-2 border-brand-black bg-white px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:px-6 md:py-4">
+            <Button
+              type="submit"
+              form="contact-form"
+              disabled={formStatus === "loading"}
+              className="font-accent h-11 w-full rounded-full border-2 border-brand-black bg-brand-orange text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-orange/90 disabled:opacity-60"
+            >
+              {formStatus === "loading" ? "Sending..." : "Send Message"}
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
