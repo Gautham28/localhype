@@ -41,7 +41,13 @@ export function Community() {
           </ul>
 
           <Button
-            render={<Link href="#community" />}
+            render={
+              <Link
+                href="https://chat.whatsapp.com/I3bvHlm8KUi9A93KbR6Rug?s=cl&p=a&mlu=1&amv=3&utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            }
             className="font-accent h-11 w-fit rounded-full border-2 border-brand-black bg-brand-purple px-6 text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-purple/90"
           >
             Join Community
