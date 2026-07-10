@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
 
-const VALID_PACKAGES = ["buzz", "hype", "viral", "takeover", "unsure"] as const;
+const VALID_PACKAGES = [
+  "story_campaigns",
+  "creator_collabs",
+  "content_studio",
+  "custom_mix",
+  "unsure",
+] as const;
 
 type ContactPayload = {
   businessName?: string;
@@ -32,7 +38,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Business name, contact name, email, contact number, and package are required",
+          "Business name, contact name, email, contact number, and service are required",
       },
       { status: 400 }
     );
@@ -47,7 +53,7 @@ export async function POST(request: Request) {
       selectedPackage as (typeof VALID_PACKAGES)[number]
     )
   ) {
-    return NextResponse.json({ error: "Invalid package selection" }, { status: 400 });
+    return NextResponse.json({ error: "Invalid service selection" }, { status: 400 });
   }
 
   const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;

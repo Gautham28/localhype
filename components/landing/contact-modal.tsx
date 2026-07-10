@@ -90,8 +90,8 @@ function ContactModal({ open, onClose }: { open: boolean; onClose: () => void })
             Get in Touch
           </h2>
           <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground md:mt-2 md:text-base">
-            Tell us about your business and we&apos;ll help you launch your
-            first LocalHype campaign.
+            Tell us about your business and we&apos;ll help you grow with local
+            creators: campaigns, collabs, and content.
           </p>
         </div>
 

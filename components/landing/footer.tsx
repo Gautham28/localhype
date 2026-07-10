@@ -40,8 +40,8 @@ export function Footer() {
           Ready to bring the hype?
         </h2>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
-          Launch a campaign and turn local word-of-mouth into real results for
-          your business.
+          Partner with LocalHype and grow your business through local micro
+          creators: campaigns, collabs, and content that convert.
         </p>
         <GetInTouchButton variant="footer" className="mt-8" />
       </div>

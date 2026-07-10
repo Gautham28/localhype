@@ -62,14 +62,14 @@ export async function Reviews() {
         reviewType="client"
         badge="Client Reviews"
         title="Trusted by local businesses."
-        description="Real feedback from brands that have run campaigns with LocalHype."
+        description="Real feedback from brands that have grown with LocalHype and our creators."
         className="bg-white px-4 py-20 md:py-28"
       />
       <ReviewSection
         reviewType="creator"
         badge="Creator Reviews"
         title="Loved by local creators."
-        description="What community members say about creating campaigns with LocalHype."
+        description="What creators say about collaborating with local brands through LocalHype."
         className="border-b-2 border-brand-black bg-white px-4 py-20 md:py-28"
       />
     </>

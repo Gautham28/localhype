@@ -40,7 +40,7 @@ export const REVIEW_FORM_COPY = {
     badge: "Client Review",
     title: "Share your experience",
     description:
-      "Tell us how your LocalHype campaign went. Your feedback helps other businesses discover what we do.",
+      "Tell us how working with LocalHype went. Your feedback helps other local businesses discover what we do.",
     businessLabel: "Business Name",
     nameLabel: "Your Name",
     successMessage:
@@ -50,7 +50,7 @@ export const REVIEW_FORM_COPY = {
     badge: "Creator Review",
     title: "Share your experience",
     description:
-      "Tell us what it's like creating with LocalHype. Your feedback helps other creators know what to expect.",
+      "Tell us what it's like creating for local brands with LocalHype. Your feedback helps other creators know what to expect.",
     businessLabel: "Business Name",
     nameLabel: "Your Name",
     successMessage:

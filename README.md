@@ -1,6 +1,6 @@
 # LocalHype
 
-A responsive landing page for LocalHype — connecting local businesses with community members for authentic word-of-mouth marketing on Instagram.
+A responsive landing page for LocalHype — a marketing company that helps local businesses grow with local creators through paid story campaigns, collabs, photoshoots, reels, and content creation.
 
 ## Stack
 

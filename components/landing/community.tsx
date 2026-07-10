@@ -4,9 +4,9 @@ import { VisionImage } from "@/components/landing/vision-image";
 import { Button } from "@/components/ui/button";
 
 const perks = [
-  "Get matched with campaigns in your area",
-  "Earn cash for posting Stories with your personal touch",
-  "Support businesses you genuinely like",
+  "Get matched with local brand campaigns & collabs",
+  "Earn for stories, reels, shoots, and content gigs",
+  "Create for businesses you genuinely like",
 ];
 
 export function Community() {
@@ -17,15 +17,16 @@ export function Community() {
     >
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2 md:gap-16">
         <div className="order-2 flex flex-col gap-6 md:order-1">
-          <PillBadge>For Community Members</PillBadge>
+          <PillBadge>For Creators</PillBadge>
 
           <h2 className="font-heading text-3xl font-extrabold leading-tight tracking-tight text-brand-black md:text-5xl lg:text-6xl">
-          Turn Your Instagram Stories into Income.
+            Get Paid to Create for Local Brands.
           </h2>
 
           <p className="max-w-lg text-base leading-relaxed text-brand-black/80 md:text-lg">
-          Your everyday posts about local spots have real value.
-          LocalHype connects you with businesses that want authentic promotion from real locals.
+            LocalHype connects creators with local businesses for paid
+            story campaigns, food &amp; barter collabs, photoshoots, reels, and
+            more. Authentic work that pays.
           </p>
 
           <ul className="space-y-3">
@@ -57,7 +58,7 @@ export function Community() {
         <div className="order-1 md:order-2">
           <VisionImage
             src="/lh_vision31.png"
-            alt="Hand holding a phone showing LocalHype with coins representing earnings"
+            alt="Hand holding a phone showing LocalHype with coins representing creator earnings"
             className="h-80 max-w-sm md:h-[28rem] md:max-w-md lg:h-[32rem] lg:max-w-lg"
           />
         </div>

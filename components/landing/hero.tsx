@@ -6,23 +6,24 @@ export function Hero() {
     <section className="bg-hero-pattern relative overflow-hidden px-4 pb-20 pt-8 md:pb-28 md:pt-12">
       <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
         <PillBadge className="mb-6 md:mb-8">
-          The new era of local marketing
+          Local marketing with creators
         </PillBadge>
 
         <h1 className="font-heading max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-brand-black md:text-6xl lg:text-7xl">
-          Turn Everyday Locals into Your Brand’s Loudest Advocates
+          Grow Your Local Business with Creators Who Know Your City
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:mt-8 md:text-lg">
-          LocalHype connects local businesses with real people who share
-          authentic stories on Instagram. No big influencers. Just genuine
-          word-of-mouth at scale.
+          LocalHype is a marketing company that connects local businesses with
+          local creators for paid story campaigns, food &amp; barter
+          collabs, product photoshoots, reels, and content that actually
+          converts.
         </p>
 
         <div className="relative mt-12 w-full max-w-sm md:mt-16 md:max-w-xl lg:max-w-2xl">
           <Image
             src="/hero2.png"
-            alt="Community members sharing local business stories on Instagram around a neighborhood coffee shop"
+            alt="Local creators collaborating with neighborhood businesses"
             width={1200}
             height={800}
             priority
