@@ -25,9 +25,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LocalHype — Local Word-of-Mouth, at Scale",
+  title: "LocalHype | Local Marketing with Creators",
   description:
-    "Connect local businesses with community members to drive authentic word-of-mouth marketing through Instagram.",
+    "LocalHype helps local businesses grow with local creators: paid story campaigns, food & barter collabs, product photoshoots, reels, and content creation.",
 };
 
 export default function RootLayout({

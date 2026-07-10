@@ -4,33 +4,33 @@ import { HowItWorksStep } from "@/components/landing/how-it-works-step";
 const steps = [
   {
     number: "01",
-    title: "Choose Your Package",
+    title: "Tell Us Your Goals",
     description:
-      "Pick the right size campaign for your goals , from testing the waters to full city coverage.",
+      "Share what you want to grow: awareness, footfall, menu launches, or a full content push. We'll recommend the right mix of campaigns and collabs.",
   },
   {
     number: "02",
-    title: "Campaign Setup",
+    title: "We Plan the Mix",
     description:
-      "We finalize the creative brief, offer, timing, hashtags, tags, and location strategy together. Most campaigns are ready in under 10 minutes.",
+      "Story campaigns, food or barter collabs, photoshoots, reels, or ongoing content. We build a clear brief, timeline, and creator brief tailored to your brand.",
   },
   {
     number: "03",
-    title: "Activation",
+    title: "Match with Creators",
     description:
-      "We post the campaign to our community. Interested locals apply. We carefully shortlist the best matches and brief them with detailed posting instructions.",
+      "We shortlist local creators who fit your vibe, audience, and neighborhood. You approve the lineup before anything goes live.",
   },
   {
     number: "04",
-    title: "Hype",
+    title: "Create & Launch",
     description:
-      "Selected community members post authentic Instagram Stories (with your provided creatives + their personal touch). This creates multiple trusted touchpoints across the city.",
+      "Creators shoot, post, and collab with your brand. We coordinate briefs, posting, and delivery so every story, reel, and shoot lands on brand.",
   },
   {
     number: "05",
-    title: "Insights & Payouts",
+    title: "Insights & Results",
     description:
-      "After 24 hours, participants submit story screenshots + view counts. We compile a clear report for you and pay every community member promptly.",
+      "You get proof of work, performance highlights, and clear next steps, so you know what worked and how to keep the momentum going.",
   },
 ] as const;
 
@@ -44,11 +44,11 @@ export function HowItWorks() {
         <div className="flex flex-col items-center text-center">
           <PillBadge className="mb-6 md:mb-8">How It Works</PillBadge>
           <h2 className="font-heading max-w-2xl text-3xl font-extrabold leading-tight tracking-tight text-brand-black md:text-5xl lg:text-6xl">
-            Five steps from campaign to citywide buzz.
+            From brief to buzz in five simple steps.
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            A simple vertical flow built for local businesses that want real
-            results.
+            A clear process for local businesses that want marketing that feels
+            human, and gets results.
           </p>
         </div>
 

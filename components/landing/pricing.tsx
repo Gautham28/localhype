@@ -4,45 +4,44 @@ import { Clapperboard } from "lucide-react";
 
 const tiers: PricingTier[] = [
   {
-    name: "Buzz",
-    price: "₹2,000",
+    name: "Story Campaigns",
+    price: "From ₹2,000",
     period: "/ campaign",
-    description: "Perfect for first-time launches and testing the waters.",
+    description: "Paid Instagram Story campaigns with local creators.",
     features: [
-      "10 local Instagram accounts",
-      "Up to 2 ready-made Story creatives",
-      "Clear briefing + detailed posting instructions",
+      "Local creators posting for your brand",
+      "Ready-made Story creatives & briefing",
+      "Clear posting instructions for every creator",
       "Proof of posting (screenshots + view counts)",
-      "Basic report with all screenshots"
+      "Campaign report with key highlights",
     ],
   },
   {
-    name: "Hype",
-    price: "₹3,500",
-    period: "/ campaign",
-    description: "Our sweet spot for growing local businesses.",
+    name: "Creator Collabs",
+    price: "Custom",
+    period: "/ collab",
+    description: "Food collabs, barter collabs, and brand partnerships that feel real.",
     features: [
-      "20 local Instagram accounts",
-      "Up to 4 ready-made Story creatives",
-      "Higher quality participant filtering",
-      "Professional report with total & average views",
-      "Everything in Buzz",
+      "Food & dining collabs with local creators",
+      "Barter collabs for product or experience trades",
+      "Creator matching based on vibe & audience",
+      "Coordinated briefs, visits, and deliverables",
+      "Content you can reuse across your channels",
     ],
     highlighted: true,
     badge: "Most Popular",
   },
   {
-    name: "Viral",
-    price: "₹6,000",
-    period: "/ campaign",
-    description: "Maximum reach for brands that want to own the conversation.",
+    name: "Content Studio",
+    price: "Custom",
+    period: "/ project",
+    description: "Product photoshoots, reel creation, and content that sells.",
     features: [
-      "40 local Instagram accounts",
-      "Up to 6 ready-made Story creatives",
-      "Premium participant filtering",
-      "Advanced insights & reporting",
-      "Performance bonus for top performers",
-      "Everything in Hype"
+      "Product & brand photoshoots",
+      "Reel creation with local creators",
+      "Ongoing content creation for your brand",
+      "On-brand creative direction & editing",
+      "Assets ready for Instagram, WhatsApp & more",
     ],
   },
 ];
@@ -52,13 +51,13 @@ export function Pricing() {
     <section id="launch" className="bg-white px-4 py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-center text-center">
-          <PillBadge className="mb-6 md:mb-8">Pricing</PillBadge>
+          <PillBadge className="mb-6 md:mb-8">Services</PillBadge>
           <h2 className="font-heading max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-brand-black md:text-5xl lg:text-6xl">
-            Packages built for every stage of growth.
+            Everything you need to market locally.
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Choose a campaign size that fits your goals. Scale up anytime, no
-            long-term contracts.
+            Pick a service or mix them. We build campaigns around local micro
+            creators. No long-term contracts required.
           </p>
         </div>
 
@@ -80,17 +79,20 @@ export function Pricing() {
                 <Clapperboard className="size-6 text-white" />
               </div>
               <span className="font-accent text-sm font-bold uppercase tracking-[0.2em] text-white/90">
-                Add-on package
+                Full-service option
               </span>
             </div>
             <h3 className="font-heading text-2xl font-extrabold tracking-tight text-white md:text-4xl">
-              Takeover
+              Custom Marketing Mix
             </h3>
             <p className="text-base leading-relaxed text-white/90 md:text-lg">
-            We produce one high-quality promotional Reel featuring one of our local micro-influencers (3K+ followers).
+              Need stories, collabs, and content together? We design a custom
+              package that combines paid story campaigns, food or barter
+              collabs, product photoshoots, and reel creation around your goals.
             </p>
             <p className="text-base leading-relaxed text-white/90 md:text-lg">
-            The Reel is posted as a collaborative post between the business and LocalHype, and can be shared across our creator community for additional reach and engagement.
+              Tell us what you&apos;re launching, and we&apos;ll recommend the right
+              mix of local creators and deliverables.
             </p>
           </div>
         </div>

@@ -13,10 +13,10 @@ const labelClass =
   "font-accent text-xs font-semibold uppercase tracking-[0.15em] text-brand-black";
 
 const packages = [
-  { value: "buzz", label: "Buzz", price: "₹2,000" },
-  { value: "hype", label: "Hype", price: "₹3,500" },
-  { value: "viral", label: "Viral", price: "₹6,000" },
-  { value: "takeover", label: "Takeover", price: null },
+  { value: "story_campaigns", label: "Story Campaigns", price: "From ₹2,000" },
+  { value: "creator_collabs", label: "Creator Collabs", price: null },
+  { value: "content_studio", label: "Content Studio", price: null },
+  { value: "custom_mix", label: "Custom Mix", price: null },
   { value: "unsure", label: "Not sure yet", price: null },
 ] as const;
 
@@ -96,8 +96,8 @@ export function ContactForm({
           Message sent!
         </p>
         <p className="mt-3 text-base leading-relaxed text-brand-black/80">
-          Thanks for reaching out. We&apos;ll be in touch about your campaign
-          shortly.
+          Thanks for reaching out. We&apos;ll be in touch about how we can help
+          your business shortly.
         </p>
       </div>
     );
@@ -172,7 +172,7 @@ export function ContactForm({
       </div>
 
       <fieldset>
-        <legend className={cn(labelClass, "mb-3 block")}>Select Package</legend>
+        <legend className={cn(labelClass, "mb-3 block")}>Select Service</legend>
         <div className="flex flex-wrap gap-2">
           {packages.map((pkg) => (
             <label
@@ -213,14 +213,14 @@ export function ContactForm({
         </div>
         {packageError && (
           <p className="mt-2 text-sm font-medium text-brand-orange">
-            Please select a package
+            Please select a service
           </p>
         )}
       </fieldset>
 
       <div className="flex flex-col gap-2">
         <label htmlFor="contact-message" className={labelClass}>
-          Tell us about your campaign{" "}
+          Tell us about your goals{" "}
           <span className="normal-case tracking-normal text-muted-foreground">
             (optional)
           </span>

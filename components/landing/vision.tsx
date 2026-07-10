@@ -7,37 +7,37 @@ export function Vision() {
       <div className="mx-auto flex max-w-6xl flex-col gap-20 md:gap-28">
         <VisionRow
           pill="The Vision"
-          headline="Everyone is an Influencer."
-          body="Every neighbor, student, and local with a phone has the power to spark real buzz. LocalHype turns authentic word-of-mouth into measurable reach for the places people actually love."
+          headline="Local Creators. Real Reach."
+          body="The people who already love your neighborhood are the best marketers for it. LocalHype pairs local businesses with creators who turn everyday trust into campaigns, collabs, and content that drive footfall."
           illustration={
             <VisionImage
               src="/lh_vision11.png"
-              alt="Diverse group of local community members of all ages"
+              alt="Diverse group of local creators of all ages"
             />
           }
         />
 
         <VisionRow
           pill="For Local Businesses"
-          headline="Marketing That Feels Human."
-          body="Stop shouting into the void. Launch campaigns that land through trusted voices, the people your customers already know, follow, and believe."
+          headline="Marketing Built for Local Brands."
+          body="From paid story campaigns and food collabs to product photoshoots and reel creation, we handle the strategy, creator matching, and delivery so you can focus on running your business."
           illustration={
             <VisionImage
               src="/lh-vision21.png"
-              alt="Local business owner checking campaign results on their phone"
+              alt="Local business owner reviewing marketing results on their phone"
             />
           }
           reversed
         />
 
         <VisionRow
-          pill="For Community Members"
-          headline="Your Stories Have Value."
-          body="Share your favorite spots, get compensated for real engagement, and help the businesses you love thrive , just by being yourself."
+          pill="For Creators"
+          headline="Create for Brands You Believe In."
+          body="Get matched with local businesses for paid stories, collabs, shoots, and content gigs. Earn for your creativity while helping the places you love grow."
           illustration={
             <VisionImage
               src="/lh_vision31.png"
-              alt="Hand holding a phone showing LocalHype with coins representing earnings"
+              alt="Hand holding a phone showing LocalHype with coins representing creator earnings"
             />
           }
         />
